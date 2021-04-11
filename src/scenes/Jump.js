@@ -24,7 +24,7 @@ class Jump extends Phaser.Scene {
 
         // setup dat.gui
         this.gui = new dat.GUI();
-        let playerFolder = this.gui.addFolder('Player');
+        let playerFolder = this.gui.addFolder('Player Parameters');
         playerFolder.add(this, 'ACCELERATION', 0, 2500).step(50);
         playerFolder.add(this, 'DRAG', 0, 1000).step(50);
         playerFolder.add(this, 'JUMP_VELOCITY', -2000, 0).step(50);
@@ -35,7 +35,6 @@ class Jump extends Phaser.Scene {
         settingsFolder.add(this, 'Y_GRAVITY', 0, 5000).step(50);
         settingsFolder.addColor(this, 'BGcolor');
         settingsFolder.add(this, 'WORLD_COLLIDE');
-        settingsFolder.open();
 
         // set bg color
         this.cameras.main.setBackgroundColor(this.BGcolor);
